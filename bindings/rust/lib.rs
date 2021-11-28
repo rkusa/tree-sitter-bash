@@ -28,6 +28,9 @@ pub fn language() -> Language {
     unsafe { tree_sitter_bash() }
 }
 
+/// The syntax highlighting query for this language.
+pub const HIGHLIGHT_QUERY: &'static str = include_str!("../../queries/highlights.scm");
+
 /// The content of the [`node-types.json`][] file for this grammar.
 ///
 /// [`node-types.json`]: https://tree-sitter.github.io/tree-sitter/using-parsers#static-node-types
